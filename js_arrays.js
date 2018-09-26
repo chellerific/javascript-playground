@@ -98,3 +98,11 @@ a.includes(value, i)
 //Sort with a custom compare function
 const b =[1, 3,2,11]
 a.sort((a,b) => a-b) //ascending
+
+//Copying an existing array by value
+const b = Arry.from(a)
+//or
+const b = Array.from(a, x => x % 2 == 0)
+
+//Copy portions of an array into an array itself in other positions
+//Research copyWithin()
