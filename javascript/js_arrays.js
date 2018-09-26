@@ -1,32 +1,32 @@
 /* JAVASCRIPT ARRAYS CHEAT SHEET */
 
 //Initialize array
-const a = []
-const a = [1,2,3]
-const a = Array.of(1,2,3)
-const a = Array(6).fill(1)
+const a = [];
+const a = [1, 2, 3];
+const a = Array.of(1, 2, 3);
+const a = Array(6).fill(1);
 
 //Iterates a until f() returns false
-a.every(f)
+a.every(f);
 
 //Iterates a until f() returns true
-a.some(f)
+a.some(f);
 
 /* Iterates a and builds a new array with the result of 
 executing f() on each a element*/
-const b = a.map(f)
+const b = a.map(f);
 
 /* Iterates a and builds a new array with elements of a that
 returned true when executing f() on each a element */
-const b = a.filter(f)
+const b = a.filter(f);
 
 /* reduce() executes a callback function on all items of the
 array and allows to progressively compute a result. If
 initialValue is specified, accumulator in the first iteration
 will equal to that value */
-;[1,2,3,4].reduce((accumulator, currentValue, currentIndex, array) => {
-    return accumulator * currentValue
-}, 1)
+[1, 2, 3, 4].reduce((accumulator, currentValue, currentIndex, array) => {
+  return accumulator * currentValue;
+}, 1);
 
 /*
 iteration 1: 1 * 1 => return 1
@@ -39,70 +39,70 @@ return value is 24
 
 //forEach
 a.forEach(v => {
-    console.log(v)
-})
+  console.log(v);
+});
 
 //for..of
 for (let v of a) {
-    console.log
+  console.log;
 }
 
 //.entries() returns an iterator of key/value pairs
-let it = a.entries()
+let it = a.entries();
 
 //Add at the end
-a.push(4)
+a.push(4);
 
 //Add at the beginning
-a.unshift(0)
-a.unshift(-2,-1)
+a.unshift(0);
+a.unshift(-2, -1);
 
 //Remove from the end
-a.pop()
+a.pop();
 
 //Remove from the beginning
-a.shift()
+a.shift();
 
 //Get the first 2 items
-a.splice(0,2)
+a.splice(0, 2);
 
 //Get the 2 items from index 3
-a.splice(3,2)
+a.splice(3, 2);
 
 /* Removes 3 items starting from index 2 and adds 2 items
 while still starting from index 2 */
-a.splice(2, 3, 2, 'k', 'h')
+a.splice(2, 3, 2, "k", "h");
 
 //Join multiple arrays
-const a = [1,2]
-const b = [3,4]
+const a = [1, 2];
+const b = [3, 4];
 
-a.concat(b)
+a.concat(b);
 
 //Index of first & last matching item found, -1 if not found
-a.indexOf() //first
-a.lastIndexOf() //last
+a.indexOf(); //first
+a.lastIndexOf(); //last
 
 //Returns the first item that returns true otherwise undefined
 a.find((element, index, array) => {
-    //return true or false
-    //For index use findIndex
-})
+  //return true or false
+  //For index use findIndex
+});
 
 //Return the first element in the array that has id === my_id
-a.find(x => x.id === my_id)
+a.find(x => x.id === my_id);
 
 //Returns true if a contains value after the position i
-a.includes(value, i)
+a.includes(value, i);
 
 //Sort with a custom compare function
-const b =[1, 3,2,11]
-a.sort((a,b) => a-b) //ascending
+const b = [1, 3, 2, 11];
+a.sort((a, b) => a - b); //ascending
 
 //Copying an existing array by value
-const b = Arry.from(a)
+const b = Arry.from(a);
 //or
-const b = Array.from(a, x => x % 2 == 0)
+const b = Array.from(a, x => x % 2 == 0);
 
 //Copy portions of an array into an array itself in other positions
 //Research copyWithin()
