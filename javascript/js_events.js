@@ -14,6 +14,9 @@ xhr.addEventListener = () => {
 /*Check if a handler is already assigned to a property using if 
 ('onsomething' in window) */
 
-/*Modern way of adding an event that allows to */
+/*Modern way of adding an event that allows to register as many handlers
+as we need. Intercept "global events". */
 window.addEventListener("load", () => {});
+
+
 
