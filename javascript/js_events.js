@@ -18,5 +18,13 @@ xhr.addEventListener = () => {
 as we need. Intercept "global events". */
 window.addEventListener("load", () => {});
 
+/*The Event object: consists of 
+- DOM element target
+- event type 
+- etc. */
+const link = document.getElementById('my-link')
+link.addEventListener('click', event => {
+  //link clicked
+})
 
 
