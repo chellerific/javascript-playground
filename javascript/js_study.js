@@ -1,15 +1,28 @@
 /* JAVASCRIPT FUNDAMENTALS GUIDE */
 
-const doSomething = ({ foo = 2, bar = "HI" }) => {
+// We've come from this...
+const attack = function attack() {
+  //...
+};
+
+//.. to the era of arrow functions
+const attack = () => {
+  //...
+};
+
+const attack = () => fetch();
+const hit = weapon => attack(weapon);
+
+const doSomething = ({ foo = 2, bar = 'HI' }) => {
   console.log(foo);
   console.log(bar);
 };
 
-const args = { foo: 3, bar: "HOOO" };
+const args = { foo: 3, bar: 'HOOO' };
 doSomething(args);
 
-var testStr = "A \
-                Rat is a Rat";
+var testStr = 'A \
+                Rat is a Rat';
 
 var result = `the result is ${args.bar}`;
 console.log(result);
@@ -17,7 +30,7 @@ console.log(result);
 //object creation expressions
 new object();
 new a(1);
-new myStuff("name", 2, { a: 4 });
+new myStuff('name', 2, { a: 4 });
 
 //function definition expressions
 const func1 = (a, b) => a * b;
@@ -26,27 +39,27 @@ const func3 = () => {
   return 2;
 };
 
-console.log("Func1: " + func1(3, 2));
-console.log("Func2: " + func2(2));
-console.log("Func3: " + func3());
+console.log('Func1: ' + func1(3, 2));
+console.log('Func2: ' + func2(2));
+console.log('Func3: ' + func3());
 
 //Array example
 const funcArr = () => {
-  return ["Chelsi", 23];
+  return ['Chelsi', 23];
 };
 
 const [name, age] = funcArr();
 
 //Object example
 const funcObj = () => {
-  return { name: "Chelsi", age: 23 };
+  return { name: 'Chelsi', age: 23 };
 };
 
 //object methods
 //Arrow funtions are not suitable to be used with object methods
 const keyblade = {
-  brand: "FFVII",
-  model: "Fenrir",
+  brand: 'FFVII',
+  model: 'Fenrir',
   attack: function() {
     console.log(`Roxas attacked`);
   }
@@ -58,13 +71,13 @@ const { name, age } = funcObj();
 
 //IIFE, Immediately Invocated Function Expressions
 (function execute() {
-  console.log("executed");
+  console.log('executed');
 });
 
 //or
 
 const executing = (function execute2() {
-  return "something";
+  return 'something';
 })();
 
 /* 'this' works differently between a function and an arrow. An
@@ -72,14 +85,14 @@ arrow function will look up this from the call stack instead of the
 scope it's inside in */
 
 //THIS WILL NOT WORK
-const link = document.querySelector("#link");
-link.addEventListener("click", () => {
+const link = document.querySelector('#link');
+link.addEventListener('click', () => {
   //this === window
 });
 
 //THIS WILL WORK
-const link = document.querySelector("#link");
-link.addEventListener("click", function() {
+const link = document.querySelector('#link');
+link.addEventListener('click', function() {
   //this === link
 });
 
@@ -89,7 +102,7 @@ const attack = kh => {
   (() => console.log(doIt))();
 };
 
-attack("KH3");
+attack('KH3');
 
 //or
 
