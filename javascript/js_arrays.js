@@ -12,40 +12,9 @@ a.every(f);
 //Iterates a until f() returns true
 a.some(f);
 
-/* Iterates a and builds a new array with the result of 
+/* Iterates a and builds a new array with the result of
 executing f() on each a element*/
 const b = a.map(f);
-
-/* Iterates a and builds a new array with elements of a that
-returned true when executing f() on each a element */
-const b = a.filter(f);
-
-/* reduce() executes a callback function on all items of the
-array and allows to progressively compute a result. If
-initialValue is specified, accumulator in the first iteration
-will equal to that value */
-[1, 2, 3, 4].reduce((accumulator, currentValue, currentIndex, array) => {
-  return accumulator * currentValue;
-}, 1);
-
-/*
-iteration 1: 1 * 1 => return 1
-iteration 1: 1 * 2 => return 2
-iteration 1: 2 * 3 => return 6
-iteration 1: 6 * 4 => return 24
-
-return value is 24
-*/
-
-//forEach
-a.forEach(v => {
-  console.log(v);
-});
-
-//for..of
-for (let v of a) {
-  console.log;
-}
 
 //.entries() returns an iterator of key/value pairs
 let it = a.entries();
@@ -71,7 +40,7 @@ a.splice(3, 2);
 
 /* Removes 3 items starting from index 2 and adds 2 items
 while still starting from index 2 */
-a.splice(2, 3, 2, "k", "h");
+a.splice(2, 3, 2, 'k', 'h');
 
 //Join multiple arrays
 const a = [1, 2];
@@ -106,3 +75,15 @@ const b = Array.from(a, x => x % 2 == 0);
 
 //Copy portions of an array into an array itself in other positions
 //Research copyWithin()
+
+//Example of getting a specific subset of properties from an object
+// where dataset has a lot more properties and we specify which
+// properties we only want
+
+const getNewArray = dataset.map(({ Title, Year, Plot, Genre, Actors }) => ({
+  Title,
+  Year,
+  Plot,
+  Genre,
+  Actors
+}));
