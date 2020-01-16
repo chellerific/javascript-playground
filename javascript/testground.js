@@ -31,8 +31,9 @@
 //   return n < 0 && Math.sqrt(n) % 1 === 0;
 // };
 
-// PART 1 - Horizontal chart
-
+/**
+ * PART 1 - Horizontal chart
+ *  */
 // let array = [2, 0, 3, 4];
 // const drawChart = array => {
 //   array.forEach(element => {
@@ -50,23 +51,47 @@
 
 // drawChart(array);
 
-// PART 2 - Vertical chart
+/**
+ * PART 2 - Vertical chart
+ *  */
 
-let array = [2, 0, 3, 4];
-const drawChart = array => {
-  let rowsLength = Math.max(...array) - 1;
-  const matrix = [...Array(4).fill(' ')].map(elem => Array(4).fill(' '));
+// let array = [2, 0, 3, 4];
+// const drawChart = array => {
+//   let rowsLength = Math.max(...array) - 1;
+//   const matrix = [...Array(4).fill(' ')].map(elem => Array(4).fill(' '));
 
-  for (let i = 0; i < array.length; i++) {
-    for (let j = rowsLength; j > rowsLength - array[i]; j--) {
-      matrix[j][i] = '|';
-    }
-  }
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = rowsLength; j > rowsLength - array[i]; j--) {
+//       matrix[j][i] = '|';
+//     }
+//   }
 
-  matrix.forEach(elem => {
-    console.log(elem.join(''));
-  });
-  console.log(matrix);
-};
+//   matrix.forEach(elem => {
+//     console.log(elem.join(''));
+//   });
+//   console.log(matrix);
+// };
 
-drawChart(array);
+// drawChart(array);
+
+/**
+ * Balanced braces check
+ */
+
+// const balancedBraces = braces => {
+//   const dictionary = {
+//     '{': '}',
+//     '[': ']',
+//     '(': ')'
+//   };
+//   const stack = [];
+
+//   for (const brace of braces) {
+//     if (dictionary[brace]) stack.push(dictionary[brace]);
+//     else {
+//       if (stack.pop() !== brace) return false;
+//     }
+//   }
+
+//   return stack.length === 0;
+// };
