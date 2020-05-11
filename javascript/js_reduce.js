@@ -16,3 +16,11 @@ iteration 1: 6 * 4 => return 24
 
 return value is 24
 */
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const fileTypes = items.reduce((total, item) => {
+  console.log('total ', total);
+  console.log('item ', item);
+  return [...total, item];
+}, []);
+
+console.log(fileTypes);

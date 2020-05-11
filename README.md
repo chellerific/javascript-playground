@@ -1,3 +1,3 @@
 # javascript-playground
 
-A space for studying JavaScript concepts.
+A personal space for studying JavaScript concepts.

@@ -24,12 +24,17 @@ getNames(...names);
 // Object literals
 const MariID = {
   id: 999,
-  name: 'Mari'
+  name: 'Mari',
 };
 
 const MariBio = {
   age: '14',
-  island: 'Zolis'
+  island: 'Zolis',
 };
 
 const Mari = { ...MariID, ...MariBio };
+
+const example = 'Architect';
+
+const obj = { ...(example && { example }) };
+console.log('Object ', obj);
